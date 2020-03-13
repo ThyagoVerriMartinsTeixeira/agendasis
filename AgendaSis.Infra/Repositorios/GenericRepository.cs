@@ -52,7 +52,7 @@ namespace AgendaSis.Infra.Repositorios
             return _db.AsNoTracking();
         }
 
-        public async Task<IList<TEntity>> GetAllAsync()
+        public async Task<List<TEntity>> GetAllAsync()
         {
             return await _db.AsNoTracking().ToListAsync();
         }

@@ -10,5 +10,6 @@ namespace AgendaSis.Application.Services.Salas
     {
         Task<IEnumerable<SalaResponseDto>> GetAllAsync();
         Task<SalaResponseDto> CreateAsync(SalaRequestDto model);
+        Task<SalaResponseDto> GetById(int id);
     }
 }

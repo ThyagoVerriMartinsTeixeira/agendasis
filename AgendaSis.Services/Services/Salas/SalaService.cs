@@ -46,5 +46,18 @@ namespace AgendaSis.Application.Services.Salas
                 Capacidade = sala.Capacidade
             });
         }
+
+        public async Task<SalaResponseDto> GetById(int id)
+        {
+            var sala = await _salaRepository.GetByIdAsync(id);
+
+            return new SalaResponseDto
+            {
+                Id = sala.Id,
+                Andar = sala.Andar,
+                Capacidade = sala.Capacidade,
+                Nome = sala.Nome
+            };
+        }
     }
 }

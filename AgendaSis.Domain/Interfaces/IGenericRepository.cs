@@ -11,7 +11,7 @@ namespace AgendaSis.Domain.Interfaces
     {
         IQueryable<TEntity> GetAll();
         IQueryable<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate);
-        Task<IList<TEntity>> GetAllAsync();
+        Task<List<TEntity>> GetAllAsync();
         Task<TEntity> GetByIdAsync(int id);
         Task CreateAsync(TEntity entity, bool saveChanges = true);
         Task UpdateAsync(TEntity entity, bool saveChanges = true);

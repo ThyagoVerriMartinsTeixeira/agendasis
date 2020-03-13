@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AgendaSis.Application.Services.Generos;
 using AgendaSis.Application.Services.Salas;
 using AgendaSis.Domain.Interfaces;
 using AgendaSis.Infra.Contexto;
@@ -37,6 +38,10 @@ namespace AgendaSis.Web
 
             services.AddScoped<ISalaRepository, SalaRepository>();
             services.AddScoped<ISalaService, SalaService>();
+
+            services.AddScoped<IGeneroRepository, GeneroRepository>();
+            services.AddScoped<IGeneroService, GeneroService>();
+            //services.AddScoped<IGeneroService, GeneroFakeService>();
 
             services.AddControllers();
         }
