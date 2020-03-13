@@ -37,6 +37,11 @@ namespace AgendaSis.Application.Services.Generos
 
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            await Task.Run(() => Console.WriteLine("Exlui o genero"));
+        }
+
         public async Task<List<GeneroResponseDto>> GetAllAsync()
         {
             await Task.Run(() => Console.WriteLine("Listei o genero"));

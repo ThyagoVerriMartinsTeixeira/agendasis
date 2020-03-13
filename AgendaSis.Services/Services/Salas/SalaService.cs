@@ -34,6 +34,11 @@ namespace AgendaSis.Application.Services.Salas
             return modelResponse;
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            await _salaRepository.DeleteAsync(id);
+        }
+
         public async Task<IEnumerable<SalaResponseDto>> GetAllAsync()
         {
             var lista = await _salaRepository.GetAllAsync();
@@ -58,6 +63,20 @@ namespace AgendaSis.Application.Services.Salas
                 Capacidade = sala.Capacidade,
                 Nome = sala.Nome
             };
+        }
+
+        public async Task UpdateAsync(int id, SalaRequestDto model)
+        {
+            var sala = await _salaRepository.GetByIdAsync(id);
+
+            if (sala == null)
+            {
+                throw new Exception(@"Sala com o id {id} não encontrada"); 
+            }
+
+            sala.ChangeValues(model.Nome, model.Capacidade, model.Andar);
+
+            await _salaRepository.UpdateAsync(sala);
         }
     }
 }

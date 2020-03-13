@@ -33,6 +33,11 @@ namespace AgendaSis.Application.Services.Generos
             return response;
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            await _repo.DeleteAsync(id);
+        }
+
         public async Task<List<GeneroResponseDto>> GetAllAsync()
         {
             var generos = await _repo.GetAllAsync();

@@ -12,5 +12,6 @@ namespace AgendaSis.Application.Services.Generos
         Task<List<GeneroResponseDto>> GetAllAsync();
         Task<GeneroResponseDto> CreateAsync(GeneroRequestDto model);
         Task<GeneroResponseDto> GetById(int id);
+        Task DeleteAsync(int id);
     }
 }

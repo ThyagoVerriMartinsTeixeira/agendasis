@@ -45,14 +45,16 @@ namespace AgendaSis.Web.Controllers
 
         // PUT: api/Salas/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async void Put(int id, [FromBody] SalaRequestDto model)
         {
+            await svc.UpdateAsync(id, model);
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
+            await svc.DeleteAsync(id);
         }
     }
 }
