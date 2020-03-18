@@ -2,14 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AgendaSis.Application.Services.Generos
 {
     public class GeneroFakeService : IGeneroService
     {
-
         private List<GeneroResponseDto> lista;
 
         public GeneroFakeService()
@@ -31,15 +29,14 @@ namespace AgendaSis.Application.Services.Generos
                 Nome = model.Nome
             };
 
-            await Task.Run(() => Console.WriteLine("Incluir o genero"));
+            await Task.Run(() => Console.WriteLine("Inclui o genero"));
 
             return genero;
-
         }
 
         public async Task DeleteAsync(int id)
         {
-            await Task.Run(() => Console.WriteLine("Exlui o genero"));
+            await Task.Run(() => Console.WriteLine("Exclui o genero " + id));
         }
 
         public async Task<List<GeneroResponseDto>> GetAllAsync()

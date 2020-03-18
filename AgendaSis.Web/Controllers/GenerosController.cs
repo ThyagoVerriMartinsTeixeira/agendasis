@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AgendaSis.Application.Models.Generos;
+﻿using AgendaSis.Application.Models.Generos;
 using AgendaSis.Application.Services.Generos;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AgendaSis.Web.Controllers
 {
@@ -13,7 +10,6 @@ namespace AgendaSis.Web.Controllers
     [ApiController]
     public class GenerosController : ControllerBase
     {
-
         private readonly IGeneroService svc;
 
         public GenerosController(IGeneroService service)
@@ -29,7 +25,7 @@ namespace AgendaSis.Web.Controllers
         }
 
         // GET: api/Generos/5
-        [HttpGet("{id}", Name = "GetGeneroId")]
+        [HttpGet("{id}", Name = "GetGeneroById")]
         public async Task<GeneroResponseDto> Get(int id)
         {
             return await svc.GetById(id);
@@ -50,7 +46,7 @@ namespace AgendaSis.Web.Controllers
         {
         }
 
-        // DELETE: api/ApiWithActions/5
+        // DELETE: api/Generos/5
         [HttpDelete("{id}")]
         public async Task Delete(int id)
         {

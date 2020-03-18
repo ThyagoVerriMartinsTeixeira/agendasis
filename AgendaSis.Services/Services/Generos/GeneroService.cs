@@ -1,10 +1,8 @@
 ﻿using AgendaSis.Application.Models.Generos;
 using AgendaSis.Domain.Entidades;
 using AgendaSis.Domain.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AgendaSis.Application.Services.Generos

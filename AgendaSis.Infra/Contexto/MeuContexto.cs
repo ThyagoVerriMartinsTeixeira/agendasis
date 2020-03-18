@@ -1,14 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Text;
 
 namespace AgendaSis.Infra.Contexto
 {
     public class MeuContexto : DbContext
     {
-        public MeuContexto([NotNullAttribute] DbContextOptions options) 
+        public MeuContexto([NotNullAttribute] DbContextOptions options)
             : base(options)
         {
         }

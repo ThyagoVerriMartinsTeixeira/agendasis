@@ -166,6 +166,9 @@ namespace AgendaSis.Infra.Migrations
                         .HasColumnName("GeneroId")
                         .HasColumnType("integer");
 
+                    b.HasIndex("Cpf")
+                        .IsUnique();
+
                     b.HasIndex("GeneroId");
 
                     b.HasDiscriminator().HasValue("PF");
@@ -190,6 +193,9 @@ namespace AgendaSis.Infra.Migrations
                         .HasColumnName("RazaoSocial")
                         .HasColumnType("character varying(300)")
                         .HasMaxLength(300);
+
+                    b.HasIndex("Cnpj")
+                        .IsUnique();
 
                     b.HasDiscriminator().HasValue("PJ");
                 });

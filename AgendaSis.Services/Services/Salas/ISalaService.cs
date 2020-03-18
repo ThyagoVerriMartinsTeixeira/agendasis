@@ -1,7 +1,5 @@
 ﻿using AgendaSis.Application.Models.Salas;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AgendaSis.Application.Services.Salas

@@ -2,20 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AgendaSis.Application.Services.Generos;
 using AgendaSis.Application.Services.Salas;
 using AgendaSis.Domain.Interfaces;
 using AgendaSis.Infra.Contexto;
+using AgendaSis.Infra.Filtros;
 using AgendaSis.Infra.Repositorios;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace AgendaSis.Web
 {
@@ -42,6 +39,13 @@ namespace AgendaSis.Web
             services.AddScoped<IGeneroRepository, GeneroRepository>();
             services.AddScoped<IGeneroService, GeneroService>();
             //services.AddScoped<IGeneroService, GeneroFakeService>();
+
+            services.AddScoped<IPessoaFisicaRepository, PessoaFisicaRepository>();
+            services.AddScoped<IPessoaFisicaService, PessoaFisicaService>();
+            services.AddScoped<IPessoaJuridicaRepository, PessoaJuridicaRepository>();
+            services.AddScoped<IPessoaJuridicaService, PessoaJuridicaService>();
+
+            services.AddMvc(options => options.Filters.Add(typeof(JsonExceptionFilter)));
 
             services.AddControllers();
         }
