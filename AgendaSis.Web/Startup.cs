@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AgendaSis.Application.Services.Agendas;
+using AgendaSis.Application.Services.Generos;
+using AgendaSis.Application.Services.Pessoas;
 using AgendaSis.Application.Services.Salas;
 using AgendaSis.Domain.Interfaces;
 using AgendaSis.Infra.Contexto;
@@ -44,6 +47,9 @@ namespace AgendaSis.Web
             services.AddScoped<IPessoaFisicaService, PessoaFisicaService>();
             services.AddScoped<IPessoaJuridicaRepository, PessoaJuridicaRepository>();
             services.AddScoped<IPessoaJuridicaService, PessoaJuridicaService>();
+
+            services.AddScoped<IAgendaRepository, AgendaRepository>();
+            services.AddScoped<IAgendaService, AgendaService>();
 
             services.AddMvc(options => options.Filters.Add(typeof(JsonExceptionFilter)));
 

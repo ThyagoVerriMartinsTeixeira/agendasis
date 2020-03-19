@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaSis.Domain", "AgendaS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaSis.Infra", "AgendaSis.Infra\AgendaSis.Infra.csproj", "{3F814276-3FBB-4685-9A72-467D6B38E484}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaSis.Web", "AgendaSis.Web\AgendaSis.Web.csproj", "{CC950D91-10BC-4C3C-A896-7550EF3C459E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaSis.Web", "AgendaSis.Web\AgendaSis.Web.csproj", "{CC950D91-10BC-4C3C-A896-7550EF3C459E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaSis.Application", "AgendaSis.Services\AgendaSis.Application.csproj", "{3DA41AA3-3DB5-45DD-98CA-558D2174AD5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaSis.Application", "AgendaSis.Services\AgendaSis.Application.csproj", "{3DA41AA3-3DB5-45DD-98CA-558D2174AD5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

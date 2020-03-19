@@ -18,7 +18,6 @@ namespace AgendaSis.Infra.Filtros
                 details = context.Exception?.InnerException?.Message
             })
             {
-
                 StatusCode = erroValidacao ? 400 : 500
             };
             context.Result = result;
